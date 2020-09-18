@@ -1,0 +1,17 @@
+.heading-secondary {
+	font-size: 3rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-image: linear-gradient(to right, #A4D2F7, #3373a8);
+	//display: inline-block; //to reduce the size of gradient only to text
+	-webkit-background-clip: text; //background to be only where text is
+	color: transparent; //to show only background
+	transition: all .2s;
+	letter-spacing: .2rem;
+
+	&:hover {
+		transform: skewY(2deg) skewX(15deg) scale(1.1);
+		text-shadow: .5rem 1rem 2rem rgba(#000, .4); //X Y
+	}
+}
