@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt");
 const saltRounds = 2;
+const jwt = require("jsonwebtoken");
 
 const UserSchema = new Schema({
     firstName: {
@@ -20,6 +21,9 @@ const UserSchema = new Schema({
         type: String,
         minlength: 6,
         required: true
+    },
+    token: {
+        type: String
     },
     tweets: [{
         type: Schema.Types.ObjectId,
@@ -59,6 +63,36 @@ UserSchema.methods.comparePassword = function (password, cb) {
         else {
             return cb(null, isMatch);
         }
+    })
+}
+
+UserSchema.methods.generateToken = function (cb) {
+    var user = this;
+    var token = jwt.sign(user._id.toHexString(), "secret");
+
+    user.token = token;
+    user.save(function (err, user) {
+        if (err)
+            return cb(err);
+        else {
+            return cb(null, user);
+        }
+    })
+}
+
+UserSchema.statics.findByToken = function (token, cb) {
+    var User = this;
+
+    jwt.verify(token, "secret", function (err, decode) {
+        User.findOne({
+            "_id": decode,
+            "token": token
+        }, function (err, user) {
+            if (err)
+                return cb(err);
+            else
+                return cb(null, user);
+        })
     })
 }
 

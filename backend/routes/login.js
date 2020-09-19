@@ -3,7 +3,10 @@ var router = express.Router();
 const User = require("../models/users");
 
 router.get('/', function(req, res, next) {
-  res.render('login');
+    if(req.cookies.your_auth)
+        res.redirect("/dashboard");
+    else
+        res.render("login");
 });
 
 router.post('/', function(req, res, next) {
@@ -18,6 +21,16 @@ router.post('/', function(req, res, next) {
             if(!isMatch)
                 res.redirect('/login');
 
+                user.generateToken(function (err, user) {
+                    if (err)
+                      return res.json({
+                        error: err
+                      });
+                    else {
+                    return res.cookie("your_auth", user.token)
+                               .redirect("/dashboard");
+                    }
+                })
         })
     })
     
