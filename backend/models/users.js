@@ -28,7 +28,11 @@ const UserSchema = new Schema({
     tweets: [{
         type: Schema.Types.ObjectId,
         ref: "Tweets"
-    }]
+    }],
+    friends: {
+        type: Schema.Types.ObjectId,
+        ref: "Friends"
+    }
 })
 
 

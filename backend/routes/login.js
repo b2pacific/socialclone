@@ -13,13 +13,13 @@ router.post('/', function(req, res, next) {
     const username=req.body.username;
     const password=req.body.password;
 
-    User.findOne({username: username}, function(user, error) {
+    User.findOne({username: username}, function(error, user) {
         if(!user)
-            res.redirect('/login');
+            return res.redirect('/login');
         
         user.comparePassword(password, function(err, isMatch) {
             if(!isMatch)
-                res.redirect('/login');
+                return res.redirect('/login');
 
                 user.generateToken(function (err, user) {
                     if (err)
@@ -28,7 +28,9 @@ router.post('/', function(req, res, next) {
                       });
                     else {
                     return res.cookie("your_auth", user.token)
-                               .redirect("/dashboard");
+                               .json({
+                                   message: "correct"
+                               })
                     }
                 })
         })
