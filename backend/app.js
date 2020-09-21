@@ -11,6 +11,7 @@ const registrationRouter = require('./routes/registration');
 const tweetsRouter = require('./routes/tweet');
 const loginRouter = require('./routes/login');
 const dashboardRouter = require('./routes/dashboard');
+const friendRouter = require('./routes/friends');
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use('/users', usersRouter);
 app.use('/register', registrationRouter);
 app.use('/login', loginRouter);
 app.use('/tweet', tweetsRouter);
+app.use('/friends', friendRouter);
 
 
 // catch 404 and forward to error handler

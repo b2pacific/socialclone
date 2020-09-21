@@ -4,7 +4,7 @@ const User = require("../models/users");
 const Tweet = require("../models/tweets");
 const auth = require("../authenticate");
 
-router.get('/me', auth, function(req, res, next) {
+router.get('/', auth, function(req, res, next) {
     Tweet.find({"author": req.user._id}, function(error, tweets) {
         if(!tweets)
             res.json({
