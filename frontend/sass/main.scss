@@ -1,10 +1,12 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
 @import "base/base";
 @import "base/typography";
 @import "base/animations";
 @import "base/utilities";
 
-@import "abstracts/variables";
-@import "abstracts/mixins";
+
 
 @import "layouts/navigation";
 
@@ -12,6 +14,3 @@
 
 @import "components/button";
 @import "components/form";
-
-
-

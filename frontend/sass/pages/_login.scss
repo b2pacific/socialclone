@@ -1,19 +1,49 @@
 .section--login{
-    background-image: linear-gradient(to right bottom, rgba($color-primary,.8), rgba($color-primary-dark,.8));
-    padding:3rem 5rem;
-    border-radius: 5px;
+	background-image: linear-gradient(to right bottom, rgba($color-primary-light,.8), rgba($color-tertiary-dark,.8));
+	height: 85vh;
+	padding-bottom: 5rem;
+	box-shadow: .5rem 2.5rem 4rem rgba($color-black,.35);
+	border-radius: 5px;
+	
 }
 
-.login {
-	// solid gradient
-	background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%),
-		url(../img/login.jpg);
-	background-size: cover;
-	height: 45rem;
-	border-radius: 5px;
+.form{
+	padding-top: 2rem;
+	font-size: 1.5rem;
+}
 
-	&__form {
-		width: 50%;
-		padding: 4rem 5rem;
+.login__form{
+	
+	height: 55vh;
+	border-radius: 5px;
+	background-position: center;
+	
+	&__row{
+		padding: 0rem 3rem;
+	}
+
+	&__submit{
+		padding: 1.3rem 6rem;
+		
+	}
+
+	&__label{
+		padding-bottom: 1rem;
+		padding-top: 1.3rem;
+	}
+
+}
+
+@media (min-width: 800px){
+	.login__form{
+		
+		background-image: linear-gradient(105deg, rgba($color-white,.8) 0%, rgba($color-white,.8) 50%, transparent 50% ),
+		url("../img/login.jpg");
+		background-size: cover;
+
+		&__submit{
+		padding: 1.3rem 15rem;
+		}	
+
 	}
 }

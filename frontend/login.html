@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Login | Twitter Clone</title>
+</head>
+
+<body>
+    
+    <div class="container ">
+        <div class="row section--login align-items-center">
+            <div class="display-4 mx-auto text-white heading">twitter clone login</div>
+            
+            
+            <div class="col-10 mx-auto ">
+                <div class="login__form ">
+                <form class="needs-validation text-dark lead form" novalidate>
+                    <div class="form-row login__form__row">
+                        
+                        <div class="col-12 col-md-4 mb-3">
+                            <label for="validationCustomUsername" class="login__form__label">Username</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-lg login__form__input" id="validationCustomUsername" placeholder="Username"
+                                    aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row login__form__row">
+                        <div class="col-12 col-md-4 mb-3">
+                            <label for="validationCustom04" class="login__form__label">Password</label>
+                            <input type="password" class="form-control form-control-lg login__form__input" id="validationCustom04" placeholder="Password" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Password.
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="login__form__submit">
+                        <button class="btn btn-primary btn-lg mx-auto " type="submit">Submit form</button>
+                    </div>
+                    
+                </form>
+                </div>
+                
+                <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function () {
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
