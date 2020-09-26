@@ -1,0 +1,94 @@
+.section--explore{
+    font-size: 1.5rem;
+    
+    
+    
+    nav{
+        background-color: $color-primary;
+        
+        
+    }
+
+    .myrow{
+        background-color: $color-grey-light-1;
+        border-radius: 5px;
+        border-bottom: 1px solid $color-primary-light;
+        box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.15);
+        margin-bottom: 2rem;
+        
+    }
+    
+    p{
+        font-size: 1.25rem;
+        display: inline-block;
+        
+    }
+
+    img{
+        height: 10rem;
+        width: 10rem;
+        display: inline-block;
+        transform: translateX(8rem);
+        
+
+    }
+
+    .explore__card__span{
+        text-align: center;
+    }
+
+
+    .tweet{
+        &__btn{
+            position: absolute;
+            transform: translateX(20.5rem) translateY(-10.5rem);
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            border: none;
+        }
+
+        &__form__input{
+            color: $color-grey-dark-3;
+            
+            border-radius: 2rem;
+            resize: none;
+            padding: 2.5rem 3rem;
+            outline: none;
+            margin-top: 1.25rem;
+            margin-bottom: 4rem;
+            overflow: hidden;
+            height: 20rem;
+        
+            &:focus{
+                box-shadow: 0rem 1rem 2rem rgba($color-primary,.25);    
+            }
+        }
+    }
+}
+
+
+@media (min-width: 800px){
+    .section--explore{
+        img{
+            height: 6rem;
+            width: 6rem;
+            transform: translateX(0);
+        
+
+        }
+
+        
+    .explore__card__span{
+            text-align: left;
+        }
+    }
+
+    .tweet{
+        &__btn{
+            
+            transform: translateX(76rem) translateY(-10.5rem);
+        }
+    }
+    
+}

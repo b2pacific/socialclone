@@ -1,8 +1,19 @@
 .heading{
     transition: all .3s;
     text-shadow: .5rem 1rem 2rem rgba($color-black, .4); //X Y
+    padding-top: 3rem;
     &:hover{
-        transform: scale(1.1);
+        transform: scale(.9);
         
+    }
+}
+
+@media (min-width: 800px){
+    .heading{
+        padding-top: 0px;
+        &:hover{
+            transform: scale(1.1);
+        
+        }
     }
 }

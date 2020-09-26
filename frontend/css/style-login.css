@@ -22,9 +22,16 @@ body {
 
 .heading {
   transition: all .3s;
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4); }
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4);
+  padding-top: 3rem; }
   .heading:hover {
-    transform: scale(1.1); }
+    transform: scale(0.9); }
+
+@media (min-width: 800px) {
+  .heading {
+    padding-top: 0px; }
+    .heading:hover {
+      transform: scale(1.1); } }
 
 .section--login {
   background-image: linear-gradient(to right bottom, rgba(164, 210, 247, 0.8), rgba(86, 67, 250, 0.8));
@@ -55,3 +62,13 @@ body {
     background-size: cover; }
     .login__form__submit {
       padding: 1.3rem 15rem; } }
+
+.mybtn {
+  transition: all .3s; }
+  .mybtn:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+    /* X,Y,blurr,color */ }
+  .mybtn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.2); }
