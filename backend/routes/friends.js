@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const User = require("../models/users");
 const Friend = require("../models/friendship");
 const auth = require("../authenticate");
 
-router.get('/', auth, function (req, res, next) {
+router.get('/', auth, function (req, res) {
     Friend.findOne({
         userid: req.user._id
     }).populate('friends').exec(function (error, friends) {
@@ -19,7 +19,7 @@ router.get('/', auth, function (req, res, next) {
     })
 });
 
-router.post('/', auth, function (req, res, next) {
+router.post('/', auth, function (req, res) {
     const friend = req.body.friend;
 
     User.findOne({
@@ -59,7 +59,7 @@ router.post('/', auth, function (req, res, next) {
 })
 
 
-router.post('/unfriend', auth, function (req, res, next) {
+router.post('/unfriend', auth, function (req, res) {
     const friend = req.body.friend;
 
     User.findOne({
