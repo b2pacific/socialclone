@@ -2,14 +2,14 @@ var express = require('express');
 var router = express.Router();
 const User = require("../models/users");
 
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
     if(req.cookies.your_auth)
         res.redirect("/dashboard");
     else
         res.render("login");
 });
 
-router.post('/', function(req, res, next) {
+router.post('/', function(req, res) {
     const username=req.body.username;
     const password=req.body.password;
 
