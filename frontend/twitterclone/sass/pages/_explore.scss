@@ -1,0 +1,154 @@
+.section--explore{
+    font-size: 1.5rem;
+    
+    
+    
+    nav{
+        background-color: $color-primary;
+        
+        
+    }
+
+    .myrow{
+        background-color: $color-grey-light-1;
+        border-radius: 5px;
+        border-bottom: 1px solid $color-primary-light;
+        box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.15);
+        margin-bottom: 2rem;
+        
+        &__heading{
+            display: flex;
+            align-items: center;
+            
+        }
+
+        &__dp{
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            
+        }
+
+        &__username{
+            font-weight: 500;
+            color: $color-grey-dark-3;
+        }
+
+        &__tweet{
+            margin-left: 1.5rem;
+        }
+        
+    }
+    
+
+    .tweet{
+        position: relative;
+        &__btn{
+            position: absolute;
+            
+            transform: translateX(20.5rem) translateY(-10.5rem);
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            border: 0px;
+            transition: all .3s;
+            &:focus{
+                outline: none;
+            }
+            &:hover{
+                background-color: $color-tertiary-dark;
+                transform: translateX(20.5rem) translateY(-10.5rem) scale(1.05);
+                box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.2);
+            }
+
+            &:active{
+                background-color: $color-tertiary-dark;
+                transform: translateX(20.5rem) translateY(-10.5rem) scale(.95);
+                box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.14);
+            }
+            
+
+        }
+
+        &__dp{
+            position: absolute;
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+            top: 8.25rem;
+            left: .25rem;
+        }
+
+
+        &__form__input{
+            color: $color-grey-dark-3;
+            
+            border-radius: 2rem;
+            resize: none;
+            padding: 2.5rem 3rem;
+            outline: none;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            overflow: hidden;
+            height: 20rem;
+            padding: 4rem 6rem;
+        
+            &:focus{
+                box-shadow: 0rem 1rem 2rem rgba($color-primary,.25);    
+            }
+        }
+    }
+
+    .loadmore{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (min-width: 800px){
+    .section--explore{
+        
+    
+        .tweet{
+            &__btn{
+                transform: translateX(76rem) translateY(-10.5rem);
+                &:hover{
+                    background-color: $color-tertiary-dark;
+                    transform: translateX(76rem) translateY(-10.5rem) scale(1.05);
+                    box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.2);
+                }
+
+                &:active{
+                    background-color: $color-tertiary-dark;
+                    transform: translateX(76rem) translateY(-10.5rem) scale(.95);
+                    box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.14);
+                }
+                
+
+            }
+
+            &__dp{
+                
+                height: 7.5rem;
+                width: 7.5rem;
+                
+                top: 7.85rem;
+                left: 0rem;
+            }
+
+
+            
+        }
+
+        .myrow{
+            &__tweet{
+                margin-left: 3.5rem;
+            }
+        }
+
+    }
+
+    
+    
+}
