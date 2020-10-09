@@ -174,6 +174,28 @@ header nav {
 
 .section__profile__secondary {
   display: flex; }
+  .section__profile__secondary .myrow {
+    font-size: 1.5rem;
+    background-color: #fff;
+    border-bottom: 1px solid #999;
+    display: flex; }
+    .section__profile__secondary .myrow .box {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 1.5rem;
+      margin-bottom: 1.2rem;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem; }
+      .section__profile__secondary .myrow .box__dp {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%; }
+      .section__profile__secondary .myrow .box__content {
+        padding-left: 1rem; }
+        .section__profile__secondary .myrow .box__content__tweet {
+          padding-top: .5rem;
+          font-size: 1.2rem;
+          color: #777; }
   .section__profile__secondary .previous__tweets {
     margin-top: 2rem;
     display: flex;
@@ -181,11 +203,15 @@ header nav {
     .section__profile__secondary .previous__tweets__heading {
       display: flex;
       justify-content: center;
+      text-align: center;
       color: #323232; }
       .section__profile__secondary .previous__tweets__heading__wrapper {
+        position: relative;
+        z-index: 20;
         background-color: #fff;
         top: 4.8rem;
-        position: sticky; }
+        position: sticky;
+        padding: 2rem 6rem; }
     .section__profile__secondary .previous__tweets__content {
       display: flex;
       flex-direction: column; }
@@ -240,7 +266,10 @@ header nav {
       .section__profile__secondary .previous__tweets__heading {
         margin-bottom: 2rem; }
         .section__profile__secondary .previous__tweets__heading__wrapper {
-          padding-top: 1.5rem; }
+          z-index: 20;
+          padding-top: 1.5rem;
+          padding-left: 2rem;
+          padding-right: 2rem; }
     .section__profile__secondary .suggestions {
       top: 6rem;
       position: sticky;

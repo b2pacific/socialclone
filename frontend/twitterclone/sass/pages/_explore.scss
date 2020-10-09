@@ -10,43 +10,51 @@
     }
 
     .myrow{
-        background-color: $color-grey-light-1;
-        border-radius: 5px;
-        border-bottom: 1px solid $color-primary-light;
-        box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.15);
-        margin-bottom: 2rem;
+        background-color: #fff;
+        border-bottom: 1px solid $color-grey-dark-2;
         
-        &__heading{
+        
+        
+
+            .box{
             display: flex;
-            align-items: center;
-            
-        }
-
-        &__dp{
-            height: 5rem;
-            width: 5rem;
-            border-radius: 50%;
-            
-        }
-
-        &__username{
-            font-weight: 500;
-            color: $color-grey-dark-3;
-        }
-
-        &__tweet{
+            align-items: flex-start;
+            margin-top: 1.5rem;
+            margin-bottom: 1.2rem;
             margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            
+
+            &__dp{
+                height: 4rem;
+                width: 4rem;
+                border-radius: 50%;
+            }
+
+            &__content{
+                padding-left: 1rem;
+                &__tweet{
+                    padding-top: .5rem;
+                    font-size: 1.2rem;
+                    color: $color-grey-dark;
+                }
+            }
         }
+
+        
         
     }
     
 
     .tweet{
-        position: relative;
+        &__submit{
+            display: flex;
+            justify-content: flex-end;
+        }
         &__btn{
-            position: absolute;
             
-            transform: translateX(20.5rem) translateY(-10.5rem);
+            transform: translateX(-1.8rem) translateY(-6.5rem);
+            
             height: 5rem;
             width: 5rem;
             border-radius: 50%;
@@ -57,13 +65,13 @@
             }
             &:hover{
                 background-color: $color-tertiary-dark;
-                transform: translateX(20.5rem) translateY(-10.5rem) scale(1.05);
+                transform:translateX(-1.8rem) translateY(-6.5rem) scale(1.05);
                 box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.2);
             }
 
             &:active{
                 background-color: $color-tertiary-dark;
-                transform: translateX(20.5rem) translateY(-10.5rem) scale(.95);
+                transform:translateX(-1.8rem) translateY(-6.5rem) scale(.95);
                 box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.14);
             }
             
@@ -75,8 +83,8 @@
             height: 7rem;
             width: 7rem;
             border-radius: 50%;
-            top: 8.25rem;
-            left: .25rem;
+            top: 3rem;
+            left: -.25rem;
         }
 
 
@@ -88,7 +96,7 @@
             padding: 2.5rem 3rem;
             outline: none;
             margin-top: 4rem;
-            margin-bottom: 4rem;
+            
             overflow: hidden;
             height: 20rem;
             padding: 4rem 6rem;
@@ -103,6 +111,8 @@
         display: flex;
         justify-content: center;
     }
+
+    
 }
 
 
@@ -112,16 +122,16 @@
     
         .tweet{
             &__btn{
-                transform: translateX(76rem) translateY(-10.5rem);
+                
                 &:hover{
                     background-color: $color-tertiary-dark;
-                    transform: translateX(76rem) translateY(-10.5rem) scale(1.05);
+                    transform:translateX(-1.8rem) translateY(-6.5rem) scale(1.05);
                     box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.2);
                 }
 
                 &:active{
                     background-color: $color-tertiary-dark;
-                    transform: translateX(76rem) translateY(-10.5rem) scale(.95);
+                    transform:translateX(-1.8rem) translateY(-6.5rem) scale(.95);
                     box-shadow: 0rem 1rem 1.5rem rgba($color-primary,.14);
                 }
                 
@@ -133,20 +143,15 @@
                 height: 7.5rem;
                 width: 7.5rem;
                 
-                top: 7.85rem;
-                left: 0rem;
+                top: 1.85rem;
+                left: -1rem;
             }
 
 
             
         }
 
-        .myrow{
-            &__tweet{
-                margin-left: 3.5rem;
-            }
-        }
-
+        
     }
 
     

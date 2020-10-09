@@ -1,0 +1,274 @@
+header{
+    
+    nav{
+        font-size: 1.5rem;
+        background-color: $color-primary;   
+    }
+}
+
+.section__profile{
+    
+    &__primary{
+        
+        
+        border-width:0 0 1px 0;
+        border-style: solid;
+        padding-bottom: 2.5rem;
+        
+
+
+        .profile{
+            &__dp{
+                height: 9rem;
+                width: 9rem;
+                border-radius: 50%;
+            }
+
+            &__bio{
+                padding-top: 2.5rem;
+                text-align: justify;
+                font-size: 1.45rem;
+                
+            }
+
+            &__name{
+                font-size: 2.25rem;
+                color: #323232;
+                
+            }
+
+            &__content{
+                display: flex;   
+                align-items: center;
+                justify-content: space-around;
+                
+
+                
+                
+                
+            }
+        }
+    }
+    
+    &__secondary{
+        display: flex;
+        
+
+
+        .myrow{
+            font-size: 1.5rem;
+            background-color: #fff;
+            border-bottom: 1px solid $color-grey-dark-2;
+            
+            
+            display: flex;
+            
+
+                .box{
+                display: flex;
+                align-items: flex-start;
+                margin-top: 1.5rem;
+                margin-bottom: 1.2rem;
+                margin-left: 1.5rem;
+                margin-right: 1.5rem;
+                
+
+                &__dp{
+                    height: 4rem;
+                    width: 4rem;
+                    border-radius: 50%;
+                }
+
+                &__content{
+                    padding-left: 1rem;
+                    &__tweet{
+                        padding-top: .5rem;
+                        font-size: 1.2rem;
+                        color: $color-grey-dark;
+                    }
+                }
+            }
+
+            
+            
+        }
+        
+
+
+
+
+
+        .previous__tweets{
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            &__heading{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+
+                color: #323232;
+                &__wrapper{
+                    position: relative;
+                    z-index: 20;
+                    background-color: $color-white;
+                    top: 4.8rem;
+                    position: sticky;
+                    padding: 2rem 6rem;
+                    
+                    
+                    
+
+                }
+            }
+
+            &__content{
+                    display:flex;
+                    flex-direction: column;
+                    
+            }
+        }
+
+        .suggestions{
+            
+            order:-1;        // To keep the friends suggestions above in the mobile devices
+            display:flex;
+            flex-direction: row;
+            min-height: 12rem;
+            overflow-x: auto;
+            align-items: center;
+            border-bottom: 1px solid black;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            
+            &__box{
+                display: flex;
+                flex-direction: column;
+                min-width: 9.5rem;
+                max-width: 9.5rem;
+                min-height: 12rem;
+                background-color: $color-white;
+                border: 1px solid black;
+                margin-left: 1rem;
+                justify-content: space-around;
+                margin-bottom: 2.5rem;
+
+                &__img{
+                    align-self: center;
+                    height: 6rem;
+                    width: 6rem;
+                    border-radius: 50%;
+                }
+                &__name{
+                    align-self: center;
+                    text-align: center;
+                    
+                    
+                }
+            }
+            
+
+        }
+    }
+    
+}
+
+@media (min-width:800px){
+    
+    .section__profile{
+
+        &__primary{
+            .profile{
+                &__name{
+                    padding-left: 3rem;
+                    font-size: 4rem;
+                }
+
+                &__bio{
+                    
+                    font-size: 1.75rem;
+                    
+                }
+
+                &__dp{
+                    height: 12rem;
+                    width: 12rem;
+                }
+
+                &__content{
+                    display: flex;   
+                    align-items: center;
+                    justify-content: flex-start;
+                
+                }
+            }
+        }
+
+
+        &__secondary{
+            display: flex;
+            
+
+            .previous__tweets{
+                border-width: 0 1px 0 0;
+                border-style: solid;
+
+                &__heading{
+                    margin-bottom: 2rem;
+                    &__wrapper{
+                        
+                        z-index: 20;
+                        padding-top: 1.5rem;
+                        padding-left: 2rem;
+                        padding-right: 2rem;
+                        
+                    }
+                }
+                
+                
+
+
+            }
+
+            .suggestions{
+                top: 6rem;
+                position: sticky;
+                order:0;    
+                display:flex;
+                max-height: 85vh;
+                overflow-y: auto;
+                flex-direction: column;
+                border:none;
+                &__box{
+                    display: flex;
+                    flex-direction: row;
+                    min-width: 22rem;
+                    min-height: 8rem;
+                    background-color: $color-white;
+                    
+                    
+                    &__img{
+                        height: 6rem;
+                        width: 6rem;
+                        border-radius: 50%;
+                    }
+                    &__name{
+                        
+                    
+                        display: flex;
+                        justify-content: flex-start;
+                        font-size: 1.5rem;
+                        min-width: 12rem;
+                        max-width: 12rem;
+                        
+                        
+                        
+                    }
+                }
+
+            }
+        }
+        
+    }
+}

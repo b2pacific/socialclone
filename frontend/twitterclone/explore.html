@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style-explore.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Explore | Twitter Clone</title>
 </head>
 
@@ -34,117 +35,143 @@
         </nav>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-9">
-                    <h1 class="text-primary heading block font-weight-light">tweet</h1>
+                <div class="col-12 col-md-9 mt-5">
+                    
                     <form action="">
                         <div class="form-group">
                             <img src="img/login.jpg" class="tweet__dp" alt="">
                             
                             <textarea class="form-control form-control-lg tweet__form__input" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your tweet."></textarea>
-                            <button type="submit" class="tweet__btn bg-primary font-weight-bold text-white">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                                </svg>
-                            </button>
+                            
+                            <div class="tweet__submit">
+                                <button type="submit" class="tweet__btn bg-primary text-white">
+                                
+                                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                    </svg>
+                                </button>
+                            </div>
                             
                         </div>
                     </form>
-                    <div class="row myrow my-3 mx-5 mb-5"></div>
-                    <div class="row myrow py-3 px-4">
-                        <div class="myrow__heading my-2">
-                            <img src="img/login.jpg" class="myrow__dp mx-3" alt="">
-                            <h3 class="myrow__username mx-3">Saumya Shah</h3>
-                        </div>
-                        <p class="myrow__tweet mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda harum aliquid fuga error aspernatur accusamus magni qui, repellendus odit consequuntur similique incidunt optio fugit sit? Accusantium in architecto asperiores quos odio non fugiat molestiae. Et aperiam enim eius vel impedit laboriosam culpa corporis, nobis magni consequuntur voluptatem officiis nulla.</p>
-                        
-                    </div>
-                    <div class="row myrow py-3 px-4">
-                        <div class="myrow__heading my-2">
-                            <img src="img/login.jpg" class="myrow__dp mx-3" alt="">
-                            <h3 class="myrow__username mx-3">Saumya Shah</h3>
-                        </div>
-                        <p class="myrow__tweet mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda harum
-                            aliquid fuga error aspernatur accusamus magni qui, repellendus odit consequuntur similique incidunt optio fugit
-                            sit? Accusantium in architecto asperiores quos odio non fugiat molestiae. Et aperiam enim eius vel impedit
-                            laboriosam culpa corporis, nobis magni consequuntur voluptatem officiis nulla.</p>
+
+                    <hr class="mb-5">
                     
-                    </div>
-                    <div class="row myrow py-3 px-4">
-                        <div class="myrow__heading my-2">
-                            <img src="img/login.jpg" class="myrow__dp mx-3" alt="">
-                            <h3 class="myrow__username mx-3">Saumya Shah</h3>
-                        </div>
-                        <p class="myrow__tweet mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda harum
-                            aliquid fuga error aspernatur accusamus magni qui, repellendus odit consequuntur similique incidunt optio fugit
-                            sit? Accusantium in architecto asperiores quos odio non fugiat molestiae. Et aperiam enim eius vel impedit
-                            laboriosam culpa corporis, nobis magni consequuntur voluptatem officiis nulla.</p>
                     
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="row myrow py-3 px-4">
-                        <div class="myrow__heading my-2">
-                            <img src="img/login.jpg" class="myrow__dp mx-3" alt="">
-                            <h3 class="myrow__username mx-3">Saumya Shah</h3>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
                         </div>
-                        <p class="myrow__tweet mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda harum
-                            aliquid fuga error aspernatur accusamus magni qui, repellendus odit consequuntur similique incidunt optio fugit
-                            sit? Accusantium in architecto asperiores quos odio non fugiat molestiae. Et aperiam enim eius vel impedit
-                            laboriosam culpa corporis, nobis magni consequuntur voluptatem officiis nulla.</p>
-                    
+                    </div>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="row myrow py-3 px-4">
-                        <div class="myrow__heading my-2">
-                            <img src="img/login.jpg" class="myrow__dp mx-3" alt="">
-                            <h3 class="myrow__username mx-3">Saumya Shah</h3>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
                         </div>
-                        <p class="myrow__tweet mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda harum
-                            aliquid fuga error aspernatur accusamus magni qui, repellendus odit consequuntur similique incidunt optio fugit
-                            sit? Accusantium in architecto asperiores quos odio non fugiat molestiae. Et aperiam enim eius vel impedit
-                            laboriosam culpa corporis, nobis magni consequuntur voluptatem officiis nulla.</p>
-                    
                     </div>
-
-                    <div class="row myrow py-3 px-4">
-                        <div class="myrow__heading my-2">
-                            <img src="img/login.jpg" class="myrow__dp mx-3" alt="">
-                            <h3 class="myrow__username mx-3">Saumya Shah</h3>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
                         </div>
-                        <p class="myrow__tweet mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda harum
-                            aliquid fuga error aspernatur accusamus magni qui, repellendus odit consequuntur similique incidunt optio fugit
-                            sit? Accusantium in architecto asperiores quos odio non fugiat molestiae. Et aperiam enim eius vel impedit
-                            laboriosam culpa corporis, nobis magni consequuntur voluptatem officiis nulla.</p>
-                    
                     </div>
-
-                    <div class="row myrow py-3 px-4">
-                        <div class="myrow__heading my-2">
-                            <img src="img/login.jpg" class="myrow__dp mx-3" alt="">
-                            <h3 class="myrow__username mx-3">Saumya Shah</h3>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
                         </div>
-                        <p class="myrow__tweet mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda harum
-                            aliquid fuga error aspernatur accusamus magni qui, repellendus odit consequuntur similique incidunt optio fugit
-                            sit? Accusantium in architecto asperiores quos odio non fugiat molestiae. Et aperiam enim eius vel impedit
-                            laboriosam culpa corporis, nobis magni consequuntur voluptatem officiis nulla.</p>
-                    
                     </div>
-
-                    <div class="row myrow py-3 px-4">
-                        <div class="myrow__heading my-2">
-                            <img src="img/login.jpg" class="myrow__dp mx-3" alt="">
-                            <h3 class="myrow__username mx-3">Saumya Shah</h3>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
                         </div>
-                        <p class="myrow__tweet mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat assumenda harum
-                            aliquid fuga error aspernatur accusamus magni qui, repellendus odit consequuntur similique incidunt optio fugit
-                            sit? Accusantium in architecto asperiores quos odio non fugiat molestiae. Et aperiam enim eius vel impedit
-                            laboriosam culpa corporis, nobis magni consequuntur voluptatem officiis nulla.</p>
-                    
                     </div>
-
-                    <div class="loadmore">
-                        <button class="stylebutton text-white bg-primary" type="button"> Load More</button>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loadmore mt-5 ">
+                        <button type="button" class="btn btn-lg styledbtn rounded btn-outline-primary">load more</button>
                     </div>
                     
                 </div>
@@ -152,6 +179,25 @@
             
         </div>
     </section>
+
+
+    <script>
+        tweets=document.getElementsByClassName("myrow");
+        for (let i=0; i<tweets.length ; i++){
+            tweets[i].addEventListener('mouseover', function(){
+                tweets[i].style.backgroundColor='#eee';
+            })
+
+            tweets[i].addEventListener('mouseout', function () {
+                tweets[i].style.backgroundColor = '#fff';
+            })
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
