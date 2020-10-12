@@ -4,14 +4,17 @@ const User = require("../models/users");
 
 router.get('/', function(req, res) {
     if(req.cookies.your_auth)
-        res.redirect("/dashboard");
+        res.redirect("/explore");
     else
         res.render("login");
 });
 
 router.post('/', function(req, res) {
-    const username=req.body.username;
-    const password=req.body.password;
+    const username=req.body.validationCustomUsername;
+    const password=req.body.validationCustom04;
+
+    console.log(req.body);
+    
 
     User.findOne({username: username}, function(error, user) {
         if(!user)
@@ -31,6 +34,7 @@ router.post('/', function(req, res) {
                                .json({
                                    message: "correct"
                                })
+                               .render("explore")
                     }
                 })
         })

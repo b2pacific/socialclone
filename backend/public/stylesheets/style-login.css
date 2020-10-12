@@ -1,0 +1,74 @@
+/* Browser reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* right now no idea */ }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  /* For border */
+  box-sizing: border-box;
+  /* right now no idea */ }
+
+.heading {
+  transition: all .3s;
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4);
+  padding-top: 3rem; }
+  .heading:hover {
+    transform: scale(0.9); }
+
+@media (min-width: 800px) {
+  .heading {
+    padding-top: 0px; }
+    .heading:hover {
+      transform: scale(1.1); } }
+
+.section--login {
+  background-image: linear-gradient(to right bottom, rgba(0, 123, 255,.5), rgba(86, 67, 250, 0.8));
+  height: 85vh;
+  padding-bottom: 5rem;
+  box-shadow: 0.5rem 2.5rem 4rem rgba(0, 0, 0, 0.35);
+  border-radius: 5px; }
+
+.form {
+  padding-top: 2rem;
+  font-size: 1.5rem; }
+
+.login__form {
+  height: 55vh;
+  border-radius: 5px;
+  background-position: center; }
+  .login__form__row {
+    padding: 0rem 3rem; }
+  .login__form__submit {
+    padding: 1.3rem 6rem; }
+  .login__form__label {
+    padding-bottom: 1rem;
+    padding-top: 1.3rem; }
+
+@media (min-width: 800px) {
+  .login__form {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../img/login.jpg");
+    background-size: cover; }
+    .login__form__submit {
+      padding: 1.3rem 15rem; } }
+
+.mybtn {
+  transition: all .3s; }
+  .mybtn:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+    /* X,Y,blurr,color */ }
+  .mybtn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.2); }

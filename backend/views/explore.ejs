@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/stylesheets/style-explore.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Explore | Twitter Clone</title>
+</head>
+
+<body>
+    <section class="section--explore">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+            <a class="navbar-brand" href="#">
+                <img src="../public/images/twitterlogo.png" style="height: 3.25rem;" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto ">
+                    <a class="nav-item nav-link active mx-3" href="#">Explore <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link mx-3" href="/dashboard">Profile</a>
+                    <a class="nav-item nav-link mx-3" href="/logout">Logout</a>
+                    
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-9 mt-5">
+                    
+                    <form action="/tweet" method="post">
+                        <div class="form-group">
+                            <img src="../public/images/login.jpg" class="tweet__dp" alt="">
+                            
+                            <textarea class="form-control form-control-lg tweet__form__input" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your tweet."></textarea>
+                            
+                            <div class="tweet__submit">
+                                <button type="submit" class="tweet__btn bg-primary text-white">
+                                
+                                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </form>
+
+                    <hr class="mb-5">
+                    
+                    
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                        <div class="box">
+                            <img src="img/login.jpg" class="box__dp" alt="">
+                            <div class="box__content">
+                                <h3 class="box__content__username text-dark">Saumya Shah</h3>
+                                <p class="box__content__tweet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi iste iure
+                                    placeat ut dolorum blanditiis doloribus, delectus neque cum? Blanditiis sit dolorum culpa molestias
+                                    porro quasi animi aut fuga eveniet qui doloribus, minus quos. Asperiores, dolores commodi? Repellat,
+                                    vitae maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loadmore mt-5 ">
+                        <button type="button" class="btn btn-lg styledbtn rounded btn-outline-primary">load more</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <script>
+        tweets=document.getElementsByClassName("myrow");
+        for (let i=0; i<tweets.length ; i++){
+            tweets[i].addEventListener('mouseover', function(){
+                tweets[i].style.backgroundColor='#eee';
+            })
+
+            tweets[i].addEventListener('mouseout', function () {
+                tweets[i].style.backgroundColor = '#fff';
+            })
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
