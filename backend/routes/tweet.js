@@ -16,6 +16,7 @@ router.get("/", auth, function (req, res) {
       tweets: tweets,
     });
   });
+
 });
 
 router.get("/all", auth, function (req, res) {
@@ -24,7 +25,7 @@ router.get("/all", auth, function (req, res) {
   Friend.findOne({ _id: friend }, function (err, friend) {
     let friends = friend.friends;
 
-    Tweet.find({}, function (err, tweets) {
+    Tweet.find({}).populate("author").exec(function (err, tweets) {
       if (!tweets)
         return res.json({
           message: "No tweets",
@@ -34,7 +35,7 @@ router.get("/all", auth, function (req, res) {
 
         for(var i = 0; i<tweets.length; i++)
         {
-            if(friends.includes(tweets[i].author))
+            if(friends.includes(tweets[i].author._id))
             {
                 result.push(tweets[i])
             }

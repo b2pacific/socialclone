@@ -10,8 +10,8 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-    const username=req.body.validationCustomUsername;
-    const password=req.body.validationCustom04;
+    const username=req.body.username;
+    const password=req.body.password;
 
     console.log(req.body);
     
@@ -31,10 +31,7 @@ router.post('/', function(req, res) {
                       });
                     else {
                     return res.cookie("your_auth", user.token)
-                               .json({
-                                   message: "correct"
-                               })
-                               .render("explore")
+                               .redirect("/explore")
                     }
                 })
         })
