@@ -41,6 +41,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/dashboard', dashboardRouter)
 app.use('/register', registrationRouter);
 app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);

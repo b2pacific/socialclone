@@ -3,7 +3,7 @@ var router = express.Router();
 const User = require("../models/users");
 const Friend = require("../models/friendship");
 
-router.post('/', function (req, res, next) {
+router.post('/', function (req, res) {
   const username = req.body.username;
   const password = req.body.password;
   const firstname = req.body.firstname;

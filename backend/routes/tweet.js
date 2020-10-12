@@ -6,7 +6,7 @@ const auth = require("../authenticate");
 const Friend = require("../models/friendship");
 
 router.get("/", auth, function (req, res) {
-  Tweet.find({ author: req.user._id }, function (error, tweets) {
+  Tweet.find({ author: req.user._id }).populate("author").exec(function (error, tweets) {
     if (!tweets)
       res.json({
         message: "No tweets",

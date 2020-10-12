@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="/stylesheets/style-profile.css">
+    <title>Profile | Twitter Clone</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="/images/twitterlogo.png" style="height: 3.25rem;" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto ">
+                    <a class="nav-item nav-link mx-3" href="/explore">Explore</a>
+                    <a class="nav-item nav-link active mx-3" href="#">Profile <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link mx-3" href="/logout">Logout</a>
+        
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="row mt-5 pt-5 section__profile__primary">
+                
+                <div class="profile__content col-12 col-md-9">
+                    <img src="/images/login.jpg" class="profile__dp" alt="">
+                    <h2 class="profile__name font-weight-light"><%= Tweets[0].author.firstName %> <%= Tweets[0].author.lastName %></h2>
+                </div>
+                <h4 class="profile__bio lead col-12 col-md-9 px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ratione
+                    aliquam hic dolores saepe doloremque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ratione
+                    aliquam hic dolores saepe doloremque!</h4>
+                
+                
+            </section>
+            <section class="row mt-5 section__profile__secondary ">
+                
+                    <div class="col-12 col-md-9 previous__tweets">
+                        <div class="row previous__tweets__heading__wrapper ">
+                            <h1 class="previous__tweets__heading ">Previous Tweets</h1>
+                        </div>
+                        
+                        <% for(var i = 0; i<Tweets.length; ++i) { %>
+
+                        <div class="previous__tweets__content">
+                            <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" class="row myrow">
+                                <div class="box">
+                                    <img src="/images/login.jpg" class="box__dp" alt="">
+                                    <div class="box__content">
+                                        <h3 class="box__content__username text-dark"><%= Tweets[i].author.username %></h3>
+                                        <p class="box__content__tweet"><%= Tweets[i].content %></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <% } %>        
+                    </div>
+                    <div class="col-12 col-md-3 suggestions">
+                        
+                        <div class="suggestions__box ">
+                            <img src="/img/login.jpg" class="suggestions__box__img" alt="">
+                            <h5 class="suggestions__box__name text-dark">Saumya Shah kushagra</h5>
+                        </div>
+
+                        
+                        <div class="suggestions__box ">
+                            <img src="/img/login.jpg" class="suggestions__box__img" alt="">
+                            <h5 class="suggestions__box__name text-dark ">Saumya Shah </h5>
+                        </div>
+
+                        <div class="suggestions__box ">
+                            <img src="/img/login.jpg" class="suggestions__box__img" alt="">
+                            <h5 class="suggestions__box__name text-dark ">Saumya Shah </h5>
+                        </div>
+
+                        
+                        <div class="suggestions__box ">
+                            <img src="/img/login.jpg" class="suggestions__box__img" alt="">
+                            <h5 class="suggestions__box__name text-dark ">Saumya Shah </h5>
+                        </div>
+
+                        
+                        <div class="suggestions__box ">
+                            <img src="/img/login.jpg" class="suggestions__box__img" alt="">
+                            <h5 class="suggestions__box__name text-dark ">Saumya Shah </h5>
+                        </div>
+
+                        <div class="suggestions__box ">
+                            <img src="/img/login.jpg" class="suggestions__box__img" alt="">
+                            <h5 class="suggestions__box__name text-dark ">Saumya Shah </h5>
+                        </div>
+
+                        <div class="suggestions__box ">
+                            <img src="/img/login.jpg" class="suggestions__box__img" alt="">
+                            <h5 class="suggestions__box__name text-dark ">Saumya Shah </h5>
+                        </div>
+
+                        
+                    </div>
+                
+                
+            </section>
+        </div>
+    </main>
+
+    <script>
+        tweets = document.getElementsByClassName("myrow");
+        for (let i = 0; i < tweets.length; i++) {
+            tweets[i].addEventListener('mouseover', function () {
+                tweets[i].style.backgroundColor = '#eee';
+            })
+
+            tweets[i].addEventListener('mouseout', function () {
+                tweets[i].style.backgroundColor = '#fff';
+            })
+        }
+
+        sbox = document.getElementsByClassName("suggestions__box");
+            for (let i = 0; i < sbox.length; i++) {
+                sbox[i].addEventListener('mouseover', function () {
+                    sbox[i].style.backgroundColor = '#eee';
+                })
+
+                sbox[i].addEventListener('mouseout', function () {
+                    sbox[i].style.backgroundColor = '#fff';
+                })
+            }
+    </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

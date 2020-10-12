@@ -1,10 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const https = require("http");
 const axios = require("axios");
-const Friend = require("../models/friendship");
-const Tweet = require("../models/tweets");
-const User = require("../models/users");
 
 const auth = require("../authenticate");
 
